@@ -51,7 +51,7 @@ void update(int grid[ROWS][COLS]) {
     scanf("%d %d", &r, &c);
 
     if(r < 0 || r >= ROWS || c < 0 || c >= COLS) {
-        printf("Invalid sector\n");
+        printf("Invalid sector \n");
         return;
     }
 
@@ -67,7 +67,7 @@ void update(int grid[ROWS][COLS]) {
     else
         grid[r][c] &= ~mask;
 
-    printf("Updated (%d,%d)\n", r, c);
+    printf("Updated (%d,%d) \n", r, c);
 }
 
 void query(int grid[ROWS][COLS]) {
@@ -76,15 +76,15 @@ void query(int grid[ROWS][COLS]) {
     scanf("%d %d", &r, &c);
 
     if(r < 0 || r >= ROWS || c < 0 || c >= COLS) {
-        printf("Invalid sector\n");
+        printf("Invalid sector \n");
         return;
     }
 
     int val = grid[r][c];
-    printf("\nSector (%d,%d):\n", r, c);
-    printf("Power: %s\n", (val & POWER_ON) ? "ON" : "OFF");
-    printf("Overload: %s\n", (val & OVERLOAD) ? "YES" : "NO");
-    printf("Maintenance: %s\n", (val & MAINTENANCE) ? "YES" : "NO");
+    printf("\nSector (%d,%d): \n", r, c);
+    printf("Power: %s \n", (val & POWER_ON) ? "ON" : "OFF");
+    printf("Overload: %s \n", (val & OVERLOAD) ? "YES" : "NO");
+    printf("Maintenance: %s \n", (val & MAINTENANCE) ? "YES" : "NO");
 }
 
 void diagnostic(int grid[ROWS][COLS]) {
@@ -98,6 +98,6 @@ void diagnostic(int grid[ROWS][COLS]) {
         }
     }
 
-    printf("\nOverloaded sectors: %d\n", over);
-    printf("Maintenance needed: %d\n", main);
+    printf("\n Overloaded sectors: %d \n", over);
+    printf("Maintenance needed: %d \n", main);
 }
