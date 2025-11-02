@@ -58,7 +58,7 @@ void displayInventory(int codes[], char names[][20], int quantities[], float pri
     printf("\n--- Inventory ---\n");
     printf("Code\tName\t\tStock\tPrice\n");
     for (int i = 0; i < count; i++) {
-        printf("%03d\t%-10s\t%d\t%.2f\n", codes[i], names[i], quantities[i], prices[i]);
+        printf("%3d \t %-10s \t%d \t %.2f \n", codes[i], names[i], quantities[i], prices[i]);
     }
 }
 
@@ -108,6 +108,6 @@ void generateInvoice(char name[], int cnic, float total) {
         printf("Invalid or no promo code. No discount applied.\n");
     }
 
-    printf("Final Amount to Pay: %.2f\n", total);
-    printf("Thank you for shopping!\n");
+    printf("Final Amount to Pay: %.2f \n", total);
+    printf("Thank you for shopping \n");
 }
